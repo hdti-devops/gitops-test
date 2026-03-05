@@ -1,0 +1,10 @@
+argo-cd:
+  configs:
+    credentialTemplates:
+      github:
+        url: https://github.com/hdti-devops
+    repositories:
+      gitops-test:
+        url: https://github.com/hdti-devops/gitops-test.git
+        name: gitops-test
+        type: git
