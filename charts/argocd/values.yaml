@@ -1,5 +1,7 @@
 argo-cd:
   configs:
+    cm:
+      kustomize.buildOptions: "--enable-helm --load-restrictor LoadRestrictionsNone"
     credentialTemplates:
       github:
         url: https://github.com/hdti-devops
