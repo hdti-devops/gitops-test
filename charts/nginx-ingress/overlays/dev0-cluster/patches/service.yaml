@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: service
+metadata:
+  name: nginx-ingress-controller
+  namespace: nginx-ingress
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-resource-group: "rg-test"
+spec:
+  loadBalancerIP: "10.10.10.10"

@@ -1,0 +1,6 @@
+---
+fullnameOverride: nginx-ingress
+controller:
+  enableCustomResources: true
+  replicaCount: 3
+  

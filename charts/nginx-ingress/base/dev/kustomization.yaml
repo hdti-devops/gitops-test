@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+helmCharts:
+  - name: nginx-ingress
+    version: 2.4.4
+    repo: oci://ghcr.io/nginx/charts
+    releaseName: nginx-ingress
+    namespace: nginx-ingress
+    valuesFile: ../../values.yaml
+    includeCRDs: true
+
+patches:
+  - target:
+      kind: Deployment
+      name: nginx-ingress-controller
+    patch: |-
+      - op: add
+        path: /spec/template/metadata/annotations
+        value:
+          app: nginx-oci
