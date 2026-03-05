@@ -12,7 +12,7 @@ spec:
   source:
     repoURL: https://github.com/hdti-devops/gitops-test.git
     targetRevision: HEAD
-    path: charts/argocd
+    path: charts/cluster-tools
     helm:
       valueFiles:
         - values.yaml
