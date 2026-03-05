@@ -19,3 +19,15 @@ patches:
         path: /spec/template/metadata/annotations
         value:
           app: nginx-oci
+  - target:
+      kind: Service
+      name: nginx-ingress-controller
+    patch: |-
+      apiVersion: v1
+      kind: Service
+      metadata:
+        name: nginx-ingress-controller
+        annotations:
+          service.beta.kubernetes.io/aapp-name: "dev-ingress"
+      spec:
+        loadBalancerIP: "10.10.10.10"
