@@ -6,4 +6,4 @@ resources:
   - ../../base/dev
 
 patches:
-  - path: ./patches/service.yaml
+  - path: ./patches/Service.yaml
